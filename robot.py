@@ -11,8 +11,8 @@ class Robot:
     def show(self):
         print(self.x, self.y)
     
-    def change_direction(self, direction):
-        if direction == "left":
+    def change_direction(self, direction): #THIS FUNCTION CAHNGES THE DIRECTION OF THE BOT'S FACE
+        if direction == "left":#IF THE ROBOT IS FACING NORTH AND WE SAY TO MOVE LEFT, SO IT FACES WEST
             if self.face == "north":
                 self.face = "west"
             elif self.face == "south":
@@ -36,13 +36,13 @@ class Robot:
             if self.y + 1 < 5:   # to keep the robot on the table (avoid the falling)
                self.y = self.y + 1
         elif self.face == "south":
-            if self.y - 1 >= 0:  # to keep the robot on the table (avoid the falling)
+            if self.y - 1 >= 0:  
                self.y = self.y - 1
         elif self.face == "west":
-            if self.x - 1 >= 0:  # to keep the robot on the table (avoid the falling)
+            if self.x - 1 >= 0:  
                self.x = self.x - 1
         elif self.face == "east":
-            if self.x + 1 < 5:   # to keep the robot on the table (avoid the falling)
+            if self.x + 1 < 5:  
                self.x = self.x + 1
 
     def give_instruction(self, instruction):
