@@ -33,12 +33,12 @@ class Robot:
 
     def move_bot(self):
         if self.face == "north":
-            if self.y + 1 < 5:   # to keep the robot on the table (avoid the falling)
-               self.y = self.y + 1
+            if self.y + 1 < 5:  # to keep the robot on the table (avoid the falling)
+               self.y = self.y +  1# IF THE BOTS IS FACING NORTH THEN WE INCREASE THE Y- AXIS
         elif self.face == "south":
             if self.y - 1 >= 0:  
                self.y = self.y - 1
-        elif self.face == "west":
+        elif self.face == "west":#IF WE MOVE THE BOT TOWARDS LEFT
             if self.x - 1 >= 0:  
                self.x = self.x - 1
         elif self.face == "east":
@@ -65,7 +65,7 @@ while(True):
         words = instruction.split(" ")
         values = words[1].split(",")
         robot.append(Robot(int(values[0]), int(values[1]), values[2].lower()))
-        num_of_bots = num_of_bots + 1
+        num_of_bots = num_of_bots + 1 #INCREASE THE NUMBER OF BOTS CAN ONLY PLACED 25 BOTS
     elif instruction == "report":
         break
     elif instruction.find("robot") == 0:
