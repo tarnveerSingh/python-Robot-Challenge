@@ -78,8 +78,8 @@ print("Robots on table: ", num_of_bots)
 print("Bot active: Robot ", index)
 x = 0
 for bot in robot:
-    print("State of Robot: ", x)
-    bot.print_state()
+    print("State of Robot: ", x)#stats shown for Robot 1/Robot 2..
+    bot.print_state()#THIS IS FOR FIRST POSTION OF THE ROBOT IS IN.
     x += 1
 
 
